@@ -1,0 +1,68 @@
+.swal2-actions button {
+    width: 150px;
+}
+.swal2-actions {
+    margin-top: 0px !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: red !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: red !important;
+}
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: red !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: red !important;
+}
+.tooltip-inner {
+    background: red !important;
+}
+.img-create {
+    border: 2px solid #e0e3e4;
+    border-radius: 5px;
+}
+.remove-btn {
+    position: absolute;
+    right: 0;
+    border-top-right-radius: 0px;
+    font-size: 10px;
+}
+.btn-std {
+    width: 100px;
+}
+.small-text-command {
+    font-size: 10px;
+    display: inline;
+}
+.border-gray {
+    border-color: #e0e3e4;
+}
+.role-section:hover {
+    cursor: pointer;
+}
+.role-section .card {
+    transition: .3s;
+}
+div[data-role-id] {
+    cursor: pointer;
+}
+.input-group-prepend {
+    width: 20% !important;
+}
+.input-group-prepend .input-group-text {
+    width: 100% !important;
+}
+.select2-container--open {
+    z-index: 9999;
+}
+.auth-btn {
+    width: 30%;
+    margin: auto;
+}
+.empty-field{
+    width:100%;
+    text-align: center;
+    color: gray;
+}

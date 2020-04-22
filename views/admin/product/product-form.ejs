@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-6 form-group">
+        <% if(product.image !== undefined) { %>
+            <img src="<%= product.image != '\\' ? product.image : '/dist/img/item.png' %>" id="imagePreview" alt="Ảnh sản phẩm"
+                class="img-create" height="290" width="290">
+        <% } else { %>
+            <img src="/dist/img/item.png" id="imagePreview" alt="Ảnh sản phẩm"
+                class="img-create" height="290" width="290">
+        <% } %>        
+    </div>
+    <div class="col-md-6 form-group">        
+        <input class="form-control" id="name" name="name" placeholder="Tên" value="<%= product.name || '' %>">        
+        <input class="form-control mt-10" type="number" id="price" step="1000" min="1000" placeholder="Giá tiền" value="<%= product.price || '1000' %>">
+        <select class="form-control mt-10 custom-select" id="cateId">
+            <% if(product.product_prop === undefined) { %>
+                <option value="0" selected></option>
+            <% } %>
+            <% for(const category of categories) { %>
+                <% if(product.categoryId !== undefined) { %>
+                    <option value="<%= category.id %>" <%= category.id === product.categoryId ? 'selected' : '' %> ><%= category.name %></option>
+                <% } else { %>
+                    <option value="<%= category.id %>"><%= category.name %></option>
+                <% } %>                
+            <% } %>
+        </select>
+        <% if(product.product_prop !== undefined ) { %>
+            <input class="form-control mt-10 text-uppercase" id="size" placeholder="Sizes" value="<%= product.product_prop.size || '' %>">
+            <input class="form-control mt-10" id="color" placeholder="Màu" value="<%= product.product_prop.color || '' %>">
+        <% } else { %>
+            <input class="form-control mt-10 text-uppercase" id="size" placeholder="Sizes">
+            <input class="form-control mt-10" id="color" placeholder="Màu" >
+        <% } %>
+        <input class="form-control mt-10" type="file" onchange="readURL(this,'#imagePreview')" name="image" id="image">
+    </div>
+</div>

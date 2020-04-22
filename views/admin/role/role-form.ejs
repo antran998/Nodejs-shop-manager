@@ -1,0 +1,15 @@
+<input class="form-control mb-15 text-center" id="roleName" value="<%= roleName %>">
+<div class="row role-section">
+    <% commands.forEach(cmd => { %>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="card <%= cmd.check !== undefined ? 'border-primary' : 'border-gray' %>" data-id="<%= cmd.id %>" onclick="handleClickCmd(this);">
+                <div class="text-primary text-center">
+                    <span>
+                        <h6 class="small-text-command"> <%= cmd.name %></h6>
+                    </span>
+                </div>
+            </div>
+        </div>
+    <% }) %>    
+</div>
+<hr>

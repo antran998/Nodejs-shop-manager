@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../layouts/head.ejs') %>
+    <!-- Toggles CSS -->
+    <link href="/vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
+    <link href="/vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
+    
+    <!-- Custom CSS -->
+    <link href="/dist/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/dist/css/custom.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <%- include('../../layouts/preloader.ejs') %>
+    <!-- HK Wrapper -->
+    <div class="hk-wrapper hk-vertical-nav">
+        <%- include('../../layouts/navigation.ejs') %>
+
+        <!-- Main Content -->
+        <div class="hk-pg-wrapper">
+            <!-- Breadcrumb -->
+            <nav class="hk-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-light bg-transparent">
+                    <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Quản lý phân quyền</li>
+                </ol>
+            </nav>
+            <!-- /Breadcrumb -->
+        
+            <!-- Container -->
+            <div class="container">
+        
+                <!-- Title -->
+                <div class="hk-pg-header">
+                    <h4 class="hk-pg-title"><span class="pg-title-icon"><span class="feather-icon"><i
+                                    data-feather="layers"></i></span></span>Quản lý phân quyền</h4>
+                </div>
+                <!-- /Title -->
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <section class="hk-sec-wrapper">
+                            <button class="btn btn-success mb-15" onclick="showForm('create');">Thêm +</button>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="row" id="roleSection">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+            <!-- /Container -->
+        
+            <!-- Footer -->
+            <div class="hk-footer-wrap container">
+                <footer class="footer">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <p>Pampered by<a href="https://hencework.com/" class="text-dark" target="_blank">Hencework</a> ©
+                                2019</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <p class="d-inline-block">Follow us</p>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span
+                                    class="btn-icon-wrap"><i class="fa fa-facebook"></i></span></a>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span
+                                    class="btn-icon-wrap"><i class="fa fa-twitter"></i></span></a>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span
+                                    class="btn-icon-wrap"><i class="fa fa-google-plus"></i></span></a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /Footer -->
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /HK Wrapper -->
+
+    <%- include('../../layouts/scripts.ejs') %>
+    <!-- Fancy Dropdown JS -->
+    <script src="/dist/js/dropdown-bootstrap-extended.js"></script>
+    
+    <!-- Slimscroll JavaScript -->
+    <script src="/dist/js/jquery.slimscroll.js"></script>
+    
+    <!-- Owl JavaScript -->
+    <script src="/vendors/owl.carousel//dist/owl.carousel.min.js"></script>
+    
+    <!-- Owl Init JavaScript -->
+    <script src="/dist/js/owl-data.js"></script>
+    
+    <!-- Toggles JavaScript -->
+    <script src="/vendors/jquery-toggles/toggles.min.js"></script>
+    <script src="/dist/js/toggle-data.js"></script>
+    
+    <!-- FeatherIcons JavaScript -->
+    <script src="/dist/js/feather.min.js"></script>
+    
+    <!-- Init JavaScript -->
+    <script src="/dist/js/init.js"></script>
+
+    <script src="/view-scripts/role-manager.js"></script>
+</body>
+
+</html>

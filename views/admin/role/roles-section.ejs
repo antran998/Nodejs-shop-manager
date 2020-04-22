@@ -1,0 +1,10 @@
+<% roles.forEach(role => { %>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-30">
+        <div class="card border-primary">
+            <button class="btn btn-danger remove-btn" data-role-id="<%= role.id %>" onclick="showFormDelete(this);">X</button>
+            <div class="card-body text-primary text-center" onclick="showForm('update',this)" data-role-id="<%= role.id %>">
+                <h5 class="text-primary"><i class="fa fa-user" aria-hidden="true"></i> <%= role.name %></h5>
+            </div>
+        </div>
+    </div>
+<% }) %>

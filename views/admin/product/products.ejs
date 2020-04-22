@@ -1,0 +1,44 @@
+<% if(products.data.length > 0) { %>    
+<div class="row">
+    <% for(const product of products.data) { %>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+            <div class="card">
+                <% if(product.image == '\\') { %>
+                    <img class="card-img-top" src="/dist/img/item.png" alt="Ảnh">
+                <% } else { %>
+                    <img class="card-img-top" src="<%= product.image %>" alt="Ảnh">
+                <% } %>
+                <button class="btn btn-danger remove-btn" data-id="<%= product.id %>" onclick="deleteForm(this);">X</button>
+                <div class="card-body text-center">
+                    <h5 class="card-title"><%= product.name %> <span class="card-text"># <%= product.code %>
+                        </span></h5>                
+                    <button class="btn btn-primary btn-std" data-id="<%= product.id %>" onclick="showForm(this);">Cập
+                        nhật</button>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<nav class="pagination-wrap justify-content-center mt-15" aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item" onclick="nextPrevHandler(this)">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <% for(let i=1; i<=products.totalPage; i++) { %>
+            <li class="page-item <%= products.currPage == i ? 'active' : '' %>" onclick="numberHandler(this)"><a class="page-link" href="#"><%= i %></a></li>
+        <% } %>
+        <li class="page-item" onclick="nextPrevHandler(this)">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<% } else { %>
+<div class="empty-field">Không có sản phẩm</div>
+<% } %>
